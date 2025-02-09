@@ -1,15 +1,28 @@
 ---
 import "../styles/global.css";
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1 class="text-red-500">Hello</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="px-4">
+    <h1 class="font-black tracking-tight text-center text-4xl md:text-5xl py-3">
+      Frontend Gallery
+    </h1>
+    <ul class="flex flex-row gap-5">
+      <button class="cursor-pointer">light</button>
+      <button class="cursor-pointer">Dark</button>
+      <button class="cursor-pointer">Cyberpunk</button>
+    </ul>
+    <p>Current theme is: <span></span></p>
+    <button
+      class="bg-indigo-600 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95"
+      >Test</button
+    >
+  </body>
 </html>
