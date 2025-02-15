@@ -8,21 +8,50 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Frontend Gallery</title>
+    <script>
+      document.addEventListener("alpine:init", () => {
+        // @ts-expect-error
+        Alpine.store("theme", {
+          val: "light",
+          init() {
+            this.val = localStorage.getItem("theme") ?? "light";
+          },
+          change(newTheme: string) {
+            this.val = newTheme;
+            localStorage.setItem("theme", newTheme);
+          },
+        });
+      });
+    </script>
   </head>
-  <body class="px-4">
-    <h1 class="font-black tracking-tight text-center text-4xl md:text-5xl py-3">
+  <body :data-theme="$store.theme.val" class="px-4">
+    <h1 class="font-extrabold text-center text-4xl md:text-5xl py-3">
       Frontend Gallery
     </h1>
     <ul class="flex flex-row gap-5">
-      <button class="cursor-pointer">light</button>
-      <button class="cursor-pointer">Dark</button>
-      <button class="cursor-pointer">Cyberpunk</button>
+      <button
+        x-data
+        data-theme="light"
+        @click="$store.theme.change($el.dataset.theme)"
+        :class="$store.theme.val === $el.dataset.theme ? 'ring' :''"
+        class="cursor-pointer p-2 rounded-lg">light</button
+      >
+      <button
+        x-data
+        data-theme="dark"
+        @click="$store.theme.change($el.dataset.theme)"
+        :class="$store.theme.val === $el.dataset.theme ? 'ring' :''"
+        class="cursor-pointer p-2 rounded-lg">Dark</button
+      >
+      <button
+        x-data
+        data-theme="cyberpunk"
+        @click="$store.theme.change($el.dataset.theme)"
+        :class="$store.theme.val === $el.dataset.theme ? 'ring' :''"
+        class="cursor-pointer p-2 rounded-lg">Cyberpunk</button
+      >
     </ul>
-    <p>Current theme is: <span></span></p>
-    <button
-      class="bg-indigo-600 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95"
-      >Test</button
-    >
+    <p>Current theme is: <span x-data x-text="$store.theme.val"></span></p>
   </body>
 </html>
