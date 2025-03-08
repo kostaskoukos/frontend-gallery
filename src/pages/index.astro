@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import ThemeButton from "../components/ThemeButton.astro";
 ---
 
 <html lang="en">
@@ -34,34 +35,10 @@ import "../styles/global.css";
       Frontend Gallery
     </h1>
     <ul class="flex flex-row gap-5">
-      <button
-        x-data
-        data-theme="light"
-        @click="$store.theme.change($el.dataset.theme)"
-        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
-        class="cursor-pointer p-2 rounded-lg">light</button
-      >
-      <button
-        x-data
-        data-theme="dark"
-        @click="$store.theme.change($el.dataset.theme)"
-        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
-        class="cursor-pointer p-2 rounded-lg">Dark</button
-      >
-      <button
-        x-data
-        data-theme="cyberpunk"
-        @click="$store.theme.change($el.dataset.theme)"
-        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
-        class="cursor-pointer p-2 rounded-lg">Cyberpunk</button
-      >
-      <button
-        x-data
-        data-theme="dracula"
-        @click="$store.theme.change($el.dataset.theme)"
-        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
-        class="cursor-pointer p-2 rounded-lg">Dracula</button
-      >
+      <ThemeButton theme="light" />
+      <ThemeButton theme="dark" />
+      <ThemeButton theme="cyberpunk" />
+      <ThemeButton theme="dracula" />
     </ul>
     <div class="py-3">
       <button
