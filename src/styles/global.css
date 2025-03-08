@@ -10,26 +10,69 @@
 @theme inline {
   --font-sans: "Montserrat", "sans-serif";
   --color-primary: var(--theme-primary);
+  --color-primary-content: var(--theme-primary-content);
   --color-secondary: var(--theme-secondary);
+  --color-secondary-content: var(--theme-secondary-content);
   --color-accent: var(--theme-accent);
+  --color-accent-content: var(--theme-accent-content);
   --color-neutral: var(--theme-neutral);
   --color-neutral-content: var(--theme-neutral-content);
-  --color-base-100: var(--theme-base-100);
+  --color-base: var(--theme-base);
+  --color-base-content: var(--theme-base-content);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --theme-base: oklch(100% 0 0);
+  --theme-base-content: oklch(21% 0.006 285.885);
+  --theme-primary: oklch(45% 0.24 277.023);
+  --theme-primary-content: oklch(93% 0.034 272.788);
+  --theme-secondary: oklch(65% 0.241 354.308);
+  --theme-secondary-content: oklch(94% 0.028 342.258);
+  --theme-accent: oklch(77% 0.152 181.912);
+  --theme-accent-content: oklch(38% 0.063 188.416);
+  --theme-neutral: oklch(14% 0.005 285.823);
+  --theme-neutral-content: oklch(92% 0.004 286.32);
+}
+
+[data-theme="dark"] {
+  --theme-scheme: dark;
+  --theme-base: oklch(25.33% 0.016 252.42);
+  --theme-base-content: oklch(97.807% 0.029 256.847);
+  --theme-primary: oklch(58% 0.233 277.117);
+  --theme-primary-content: oklch(96% 0.018 272.314);
+  --theme-secondary: oklch(65% 0.241 354.308);
+  --theme-secondary-content: oklch(94% 0.028 342.258);
+  --theme-accent: oklch(77% 0.152 181.912);
+  --theme-accent-content: oklch(38% 0.063 188.416);
+  --theme-neutral: oklch(14% 0.005 285.823);
+  --theme-neutral-content: oklch(92% 0.004 286.32);
 }
 
 [data-theme="cyberpunk"] {
+  --theme-scheme: light;
+  --theme-base: oklch(94.51% 0.179 104.32);
+  --theme-base-content: oklch(0% 0 0);
   --theme-primary: oklch(74.22% 0.209 6.35);
+  --theme-primary-content: oklch(14.844% 0.041 6.35);
   --theme-secondary: oklch(83.33% 0.184 204.72);
-  --theme-accent: oklch(71.86% 0.2176 310.43);
+  --theme-secondary-content: oklch(16.666% 0.036 204.72);
+  --theme-accent: oklch(71.86% 0.217 310.43);
+  --theme-accent-content: oklch(14.372% 0.043 310.43);
   --theme-neutral: oklch(23.04% 0.065 269.31);
-  --theme-base-100: oklch(94.51% 0.179 104.32);
+  --theme-neutral-content: oklch(94.51% 0.179 104.32);
 }
 
 [data-theme="dracula"] {
-  --theme-primary: #ff79c6;
-  --theme-secondary: #bd93f9;
-  --theme-accent: #ffb86c;
-  --theme-neutral: #414558;
-  --theme-base-100: #282a36;
-  --theme-neutral-content: #f8f8f2;
+  --theme-scheme: dark;
+  --theme-base: oklch(28.822% 0.022 277.508);
+  --theme-base-content: oklch(97.747% 0.007 106.545);
+  --theme-primary: oklch(75.461% 0.183 346.812);
+  --theme-primary-content: oklch(15.092% 0.036 346.812);
+  --theme-secondary: oklch(74.202% 0.148 301.883);
+  --theme-secondary-content: oklch(14.84% 0.029 301.883);
+  --theme-accent: oklch(83.392% 0.124 66.558);
+  --theme-accent-content: oklch(16.678% 0.024 66.558);
+  --theme-neutral: oklch(39.445% 0.032 275.524);
+  --theme-neutral-content: oklch(87.889% 0.006 275.524);
 }

@@ -25,7 +25,11 @@ import "../styles/global.css";
       });
     </script>
   </head>
-  <body :data-theme="$store.theme.val" class="px-4">
+  <body
+    x-data
+    :data-theme="$store.theme.val"
+    class="transition-colors duration-200 px-4 bg-base text-base-content"
+  >
     <h1 class="font-extrabold text-center text-4xl md:text-5xl py-3">
       Frontend Gallery
     </h1>
@@ -34,24 +38,52 @@ import "../styles/global.css";
         x-data
         data-theme="light"
         @click="$store.theme.change($el.dataset.theme)"
-        :class="$store.theme.val === $el.dataset.theme ? 'ring' :''"
+        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
         class="cursor-pointer p-2 rounded-lg">light</button
       >
       <button
         x-data
         data-theme="dark"
         @click="$store.theme.change($el.dataset.theme)"
-        :class="$store.theme.val === $el.dataset.theme ? 'ring' :''"
+        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
         class="cursor-pointer p-2 rounded-lg">Dark</button
       >
       <button
         x-data
         data-theme="cyberpunk"
         @click="$store.theme.change($el.dataset.theme)"
-        :class="$store.theme.val === $el.dataset.theme ? 'ring' :''"
+        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
         class="cursor-pointer p-2 rounded-lg">Cyberpunk</button
       >
+      <button
+        x-data
+        data-theme="dracula"
+        @click="$store.theme.change($el.dataset.theme)"
+        :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
+        class="cursor-pointer p-2 rounded-lg">Dracula</button
+      >
     </ul>
-    <p>Current theme is: <span x-data x-text="$store.theme.val"></span></p>
+    <div class="py-3">
+      <button
+        class="outline-offset-2 outline-primary focus-visible:outline-2 p-3 rounded-lg bg-primary text-primary-content"
+        >Primary</button
+      >
+      <button
+        class="outline-offset-2 outline-secondary focus:outline-2 p-3 rounded-lg bg-secondary text-secondary-content"
+        >Secondary</button
+      >
+      <button
+        class="outline-offset-2 outline-accent focus:outline-2 p-3 rounded-lg bg-accent text-accent-content"
+        >Accent</button
+      >
+      <button
+        class="outline-offset-2 outline-neutral-content focus:outline-2 p-3 rounded-lg"
+        >Ghost</button
+      >
+      <button
+        class="outline-offset-2 outline-neutral focus:outline-2 p-3 rounded-lg bg-link"
+        >Link</button
+      >
+    </div>
   </body>
 </html>
