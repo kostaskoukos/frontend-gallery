@@ -81,3 +81,18 @@
   --theme-neutral-content: oklch(87.889% 0.006 275.524);
   --theme-radius: 0.5rem;
 }
+
+[data-theme="synthwave"] {
+  --theme-scheme: dark;
+  --theme-base: oklch(20% 0.09 281.288);
+  --theme-base-content: oklch(78% 0.115 274.713);
+  --theme-primary: oklch(71% 0.202 349.761);
+  --theme-primary-content: oklch(28% 0.109 3.907);
+  --theme-secondary: oklch(82% 0.111 230.318);
+  --theme-secondary-content: oklch(29% 0.066 243.157);
+  --theme-accent: oklch(75% 0.183 55.934);
+  --theme-accent-content: oklch(26% 0.079 36.259);
+  --theme-neutral: oklch(45% 0.24 277.023);
+  --theme-neutral-content: oklch(87% 0.065 274.039);
+  --theme-radius: 0.5rem;
+}
