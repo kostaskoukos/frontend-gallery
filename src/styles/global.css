@@ -19,6 +19,7 @@
   --color-neutral-content: var(--theme-neutral-content);
   --color-base: var(--theme-base);
   --color-base-content: var(--theme-base-content);
+  --radius-radius: var(--theme-radius);
 }
 
 [data-theme="light"] {
@@ -33,6 +34,7 @@
   --theme-accent-content: oklch(38% 0.063 188.416);
   --theme-neutral: oklch(14% 0.005 285.823);
   --theme-neutral-content: oklch(92% 0.004 286.32);
+  --theme-radius: 0.25rem;
 }
 
 [data-theme="dark"] {
@@ -47,6 +49,7 @@
   --theme-accent-content: oklch(38% 0.063 188.416);
   --theme-neutral: oklch(14% 0.005 285.823);
   --theme-neutral-content: oklch(92% 0.004 286.32);
+  --theme-radius: 0.25rem;
 }
 
 [data-theme="cyberpunk"] {
@@ -61,6 +64,7 @@
   --theme-accent-content: oklch(14.372% 0.043 310.43);
   --theme-neutral: oklch(23.04% 0.065 269.31);
   --theme-neutral-content: oklch(94.51% 0.179 104.32);
+  --theme-radius: 0rem;
 }
 
 [data-theme="dracula"] {
@@ -75,4 +79,5 @@
   --theme-accent-content: oklch(16.678% 0.024 66.558);
   --theme-neutral: oklch(39.445% 0.032 275.524);
   --theme-neutral-content: oklch(87.889% 0.006 275.524);
+  --theme-radius: 0.5rem;
 }

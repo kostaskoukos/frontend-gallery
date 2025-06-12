@@ -9,8 +9,9 @@ interface Props {
   data-theme={Astro.props.theme}
   @click="$store.theme.change($el.dataset.theme)"
   :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
-  class="cursor-pointer p-2 rounded-lg"
+  class="cursor-pointer p-2 rounded-radius"
   >{
-    Astro.props.theme.charAt(0).toUpperCase() + String(Astro.props.theme.slice(1))
+    Astro.props.theme.charAt(0).toUpperCase() +
+      String(Astro.props.theme.slice(1))
   }</button
 >
