@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import ThemeButton from "../components/ThemeButton.astro";
+import Calculator from "../components/Calculator.astro";
 ---
 
 <html lang="en">
@@ -55,7 +56,7 @@ import ThemeButton from "../components/ThemeButton.astro";
         >Accent</button
       >
       <button
-        class="outline-offset-2 outline-neutral-content focus:outline-2 p-3 rounded-radius"
+        class="outline-offset-2 outline-neutral-content focus:outline-2 p-3 rounded-radius bg-neutral text-neutral-content"
         >Ghost</button
       >
       <button
@@ -63,5 +64,6 @@ import ThemeButton from "../components/ThemeButton.astro";
         >Link</button
       >
     </div>
+    <Calculator />
   </body>
 </html>
