@@ -8,7 +8,7 @@ interface Props {
   x-data
   data-theme={Astro.props.theme}
   @click="$store.theme.change($el.dataset.theme)"
-  :class="$store.theme.val === $el.dataset.theme ? 'ring ring-accent' :''"
+  :class="$store.theme.val === $el.dataset.theme && 'bg-primary text-primary-content'"
   class="cursor-pointer p-2 rounded-radius"
   >{
     Astro.props.theme.charAt(0).toUpperCase() +
