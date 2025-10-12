@@ -52,6 +52,22 @@
   --theme-radius: 0.25rem;
 }
 
+[data-theme="black"] {
+  --theme-scheme: dark;
+  --theme-base: oklch(0% 0 0);
+  --theme-base-200: oklch(19% 0 0);
+  --theme-base-300: oklch(22% 0 0);
+  --theme-base-content: oklch(87.609% 0 0);
+  --theme-primary: oklch(35% 0 0);
+  --theme-primary-content: oklch(100% 0 0);
+  --theme-secondary: oklch(35% 0 0);
+  --theme-secondary-content: oklch(100% 0 0);
+  --theme-accent: oklch(35% 0 0);
+  --theme-accent-content: oklch(100% 0 0);
+  --theme-neutral: oklch(35% 0 0);
+  --theme-neutral-content: oklch(100% 0 0);
+}
+
 [data-theme="cyberpunk"] {
   --theme-scheme: light;
   --theme-base: oklch(94.51% 0.179 104.32);
@@ -95,4 +111,55 @@
   --theme-neutral: oklch(45% 0.24 277.023);
   --theme-neutral-content: oklch(87% 0.065 274.039);
   --theme-radius: 0.5rem;
+}
+
+[data-theme="forest"] {
+  --theme-scheme: dark;
+  --theme-base: oklch(20.84% 0.008 17.911);
+  --theme-base-200: oklch(18.522% 0.007 17.911);
+  --theme-base-300: oklch(16.203% 0.007 17.911);
+  --theme-base-content: oklch(83.768% 0.001 17.911);
+  --theme-primary: oklch(68.628% 0.185 148.958);
+  --theme-primary-content: oklch(0% 0 0);
+  --theme-secondary: oklch(69.776% 0.135 168.327);
+  --theme-secondary-content: oklch(13.955% 0.027 168.327);
+  --theme-accent: oklch(70.628% 0.119 185.713);
+  --theme-accent-content: oklch(14.125% 0.023 185.713);
+  --theme-neutral: oklch(30.698% 0.039 171.364);
+  --theme-neutral-content: oklch(86.139% 0.007 171.364);
+  --theme-radius: 1rem;
+}
+
+[data-theme="caramellatte"] {
+  --theme-scheme: light;
+  --theme-base: oklch(98% 0.016 73.684);
+  --theme-base-200: oklch(95% 0.038 75.164);
+  --theme-base-300: oklch(90% 0.076 70.697);
+  --theme-base-content: oklch(40% 0.123 38.172);
+  --theme-primary: oklch(0% 0 0);
+  --theme-primary-content: oklch(100% 0 0);
+  --theme-secondary: oklch(22.45% 0.075 37.85);
+  --theme-secondary-content: oklch(90% 0.076 70.697);
+  --theme-accent: oklch(46.44% 0.111 37.85);
+  --theme-accent-content: oklch(90% 0.076 70.697);
+  --theme-neutral: oklch(55% 0.195 38.402);
+  --theme-neutral-content: oklch(98% 0.016 73.684);
+  --theme-radius: 1rem;
+}
+
+[data-theme="autumn"] {
+  --theme-scheme: dark;
+  --theme-base-100: oklch(95.814% 0 0);
+  --theme-base-200: oklch(89.107% 0 0);
+  --theme-base-300: oklch(82.4% 0 0);
+  --theme-base-content: oklch(19.162% 0 0);
+  --theme-primary: oklch(40.723% 0.161 17.53);
+  --theme-primary-content: oklch(88.144% 0.032 17.53);
+  --theme-secondary: oklch(61.676% 0.169 23.865);
+  --theme-secondary-content: oklch(12.335% 0.033 23.865);
+  --theme-accent: oklch(73.425% 0.094 60.729);
+  --theme-accent-content: oklch(14.685% 0.018 60.729);
+  --theme-neutral: oklch(54.367% 0.037 51.902);
+  --theme-neutral-content: oklch(90.873% 0.007 51.902);
+  --theme-radius: 1rem;
 }
