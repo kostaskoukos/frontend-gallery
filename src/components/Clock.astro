@@ -1,0 +1,58 @@
+<>
+  <div
+    x-data="{showSeconds:false,hourDeg:0, minuteDeg:0, secondDeg: 0}"
+    x-init="$nextTick(()=>{setInterval(()=>{
+      let now = new Date();
+      let seconds = now.getSeconds();
+      let minutes = now.getMinutes();
+      let hours = now.getHours()
+      secondDeg = seconds*6
+      minuteDeg = minutes*6 + seconds/10
+      hourDeg = hours%12*30 + minutes/2
+      },1000)})"
+  >
+    <div class="relative w-72 h-72 rounded-full bg-neutral my-3">
+      <div
+        id="hour-disk"
+        class="absolute size-full"
+        :style="`transform: rotate(${hourDeg}deg)`"
+      >
+        <div
+          id="hour-hand"
+          class="absolute left-1/2 top-1 -translate-x-1/2 size-5 rounded-radius bg-primary"
+        >
+        </div>
+      </div>
+      <div
+        id="minute-disk"
+        class="absolute size-full"
+        :style="`transform: rotate(${minuteDeg}deg)`"
+      >
+        <div
+          id="minute-hand"
+          class="z-10 absolute left-1/2 top-2 -translate-x-1/2 h-1/2 w-3 rounded-radius bg-primary"
+        >
+        </div>
+      </div>
+      <div
+        id="second-disk"
+        class="absolute size-full"
+        :style="`transform: rotate(${secondDeg}deg)`"
+      >
+        <div
+          x-show="showSeconds"
+          id="second-hand"
+          class="z-10 absolute left-1/2 top-3 -translate-x-1/2 h-1/2 w-1 rounded-radius bg-primary"
+        >
+        </div>
+      </div>
+    </div>
+    <span class="relative"
+      ><label for="seconds">Show seconds hand: </label><input
+        type="checkbox"
+        id="seconds"
+        x-model="showSeconds"
+      />
+    </span>
+  </div>
+</>
