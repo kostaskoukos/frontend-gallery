@@ -1,0 +1,30 @@
+<>
+  <div class="relative w-72 h-72 rounded-full bg-neutral my-3">
+    <div
+      x-data="{hourDeg:0}"
+      x-init="$nextTick(()=>{setInterval(()=>{hourDeg = new Date().getMinutes()*6},1000)})"
+      id="hour-disk"
+      class="absolute size-full"
+      :style="`transform: rotate(${hourDeg}deg)`"
+    >
+      <div
+        id="hour-hand"
+        class="absolute left-1/2 top-1 -translate-x-1/2 size-5 rounded-radius bg-primary"
+      >
+      </div>
+    </div>
+    <div
+      x-data="{minuteDeg:0}"
+      x-init="$nextTick(()=>{setInterval(()=>{minuteDeg = new Date().getSeconds()*6},1000)})"
+      id="minute-disk"
+      class="absolute size-full"
+      :style="`transform: rotate(${minuteDeg}deg)`"
+    >
+      <div
+        id="minute-hand"
+        class="z-10 absolute left-1/2 top-2 -translate-x-1/2 h-1/2 w-3 rounded-radius bg-primary"
+      >
+      </div>
+    </div>
+  </div>
+</>
